@@ -20,14 +20,14 @@
         {{> info-tag text=this.phone icon="fa-mobile"}}
     {{/if}}
 
-    {{#if website}}
-        {{> info-tag text=this.website icon="fa-globe" url=this.website}}
-    {{/if}}
-
     {{#if profiles}}
         {{#each profiles}}
             {{> social}}
         {{/each}}
+    {{/if}}
+    
+    {{#if url}}
+        {{> info-tag text="Personal website" icon="fa-globe" url=this.url}}
     {{/if}}
 </section>
 {{/resume.basics}}
