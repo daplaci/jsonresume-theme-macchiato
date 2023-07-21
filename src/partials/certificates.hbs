@@ -7,12 +7,10 @@
 
         
         <div class="certificate-container">
-
-            <i class="fa external-link-square"></i>
-
             {{#if url}}
                 <h4 class="info-text">
                     <a href="{{url}}" target="_blank">
+                        <i class="fa fa-external-link-square"></i>
                         {{name}}
                         {{!-- <i class="fa fa-external-link" aria-hidden="true"></i> --}}
                     </a>
@@ -22,12 +20,14 @@
             {{/if}}
         </div>
 
-        {{#if issuer}}
-        <h5 class="issuer">{{issuer}}</h5>
+        {{#if date}}
+            <h5 class="italic pull-right">
+                {{formatDate date}}
+            </h5>
         {{/if}}
 
-        {{#if date}}
-        <p class="date">{{date}}</p>
+        {{#if issuer}}
+        <h5 class="issuer">{{issuer}}</h5>
         {{/if}}
 
     </section>
