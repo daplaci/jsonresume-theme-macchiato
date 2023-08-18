@@ -22,7 +22,11 @@
                         {{#if keywords.length}}
                             <div class="minimal flex-container">
                                 {{#each keywords}}
-                                    <h6 class="skill">{{.}}</h6>
+                                    {{#if (eq . "Transformers")}}
+                                        <h6 class="skill"><a href="https://huggingface.co/transformers/" target="_blank">&#129303; {{.}}</a></h6>
+                                    {{else}}
+                                        <h6 class="skill">{{.}}</h6>
+                                    {{/if}}
                                 {{/each}}
                             </div>
                         {{/if}}
