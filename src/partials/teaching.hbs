@@ -1,0 +1,13 @@
+{{#if resume.teaching.length}}
+<div class="container education-container">
+    {{> title value="Teaching Activities"}} {{#each resume.teaching}}
+    <section class="item">
+        {{> section-header name=this.courseName }} {{#if institution}}
+        <h5 class="location">{{institution}}</h5>
+        <h4>{{#if studyType}}{{studyType}} {{/if}}
+            {{#if area}}{{area}}{{/if}}</h4>
+        {{/if}}
+    </section>
+    {{/each}}
+</div>
+{{/if}}
